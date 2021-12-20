@@ -106,9 +106,30 @@ namespace Lab4_2_OOP_Batyrov_PRO229
             }
         }
 
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (File.Exists("text.txt"))
+                File.Delete("Text.txt");
+            StreamWriter sw = new StreamWriter("text.txt");
+            sw.WriteLine(model.AgetValue().ToString());
+            sw.WriteLine(model.BgetValue().ToString());
+            sw.WriteLine(model.CgetValue().ToString());
+            sw.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            if (File.Exists("text.txt"))
+            {
+                StreamReader sr = new StreamReader("text.txt");
+                model.AsetValue(Convert.ToInt32(sr.ReadLine()));
+                model.BsetValue(Convert.ToInt32(sr.ReadLine()));
+                model.CsetValue(Convert.ToInt32(sr.ReadLine()));
+                sr.Close();
+            }
+        }
 
 
-        
     }
     public class Model
     {
