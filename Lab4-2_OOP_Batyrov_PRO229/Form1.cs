@@ -152,7 +152,7 @@ namespace Lab4_2_OOP_Batyrov_PRO229
             else if(a > Bvalue)
             {
                 Avalue = a;
-                BsetValue(a);
+                Bvalue = a;
             }
             if(a > Cvalue)
             {
@@ -173,7 +173,7 @@ namespace Lab4_2_OOP_Batyrov_PRO229
                 observers.Invoke(this, null);
                 return;
             }
-            else if(b < Avalue && b > Cvalue)
+            else if(b < Avalue || b > Cvalue)
             {
                 observers.Invoke(this, null);
             }
@@ -194,7 +194,7 @@ namespace Lab4_2_OOP_Batyrov_PRO229
             else if(c < Bvalue)
             {
                 Cvalue = c;
-                BsetValue(c);
+                Bvalue = c;
             }
             if(c < Avalue)
             {

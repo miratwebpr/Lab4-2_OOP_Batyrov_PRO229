@@ -73,6 +73,7 @@ namespace Lab4_2_OOP_Batyrov_PRO229
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(536, 142);
+            this.textBox3.MaxLength = 3;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 17;
@@ -106,6 +107,7 @@ namespace Lab4_2_OOP_Batyrov_PRO229
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(334, 142);
+            this.textBox2.MaxLength = 3;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 14;
